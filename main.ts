@@ -1,12 +1,12 @@
 input.onButtonPressed(Button.A, function () {
     microtesla += 25
     basic.showNumber(microtesla)
-    basic.showString("Microtesla",100)
+    basic.showString("Microtesla",75)
 })
 input.onButtonPressed(Button.B, function () {
     microtesla += -25
     basic.showNumber(microtesla)
-    basic.showString("Microtesla",100)
+    basic.showString("Microtesla",75)
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     basic.showNumber(input.magneticForce(Dimension.Strength))
