@@ -1,3 +1,7 @@
+input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
+    basic.showNumber(input.magneticForce(Dimension.Strength) * 0.01)
+    basic.showString("Gauss",75)
+})
 input.onButtonPressed(Button.A, function () {
     microtesla += 25
     basic.showNumber(microtesla)
@@ -10,6 +14,7 @@ input.onButtonPressed(Button.B, function () {
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     basic.showNumber(input.magneticForce(Dimension.Strength))
+    basic.showString("Microtesla",75)
 })
 let microtesla = 0
 microtesla = 75
