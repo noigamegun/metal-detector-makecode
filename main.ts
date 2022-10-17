@@ -17,13 +17,13 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     basic.showString("Microtesla",75)
 })
 let microtesla = 0
-microtesla = 75
+microtesla = 50
 basic.showString("METAL DETECTOR")
 basic.forever(function () {
     serial.writeValue("e", input.magneticForce(Dimension.Strength))
     if (input.magneticForce(Dimension.Strength) > microtesla) {
         basic.showIcon(IconNames.No)
-        music.playTone(784, music.beat(BeatFraction.Eighth))
+        music.playTone(988, music.beat(BeatFraction.Eighth))
         serial.writeValue("t", 1)
     } else {
         basic.showIcon(IconNames.Yes)
